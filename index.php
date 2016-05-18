@@ -48,8 +48,8 @@ echo "<!DOCTYPE html>
 require_once __DIR__ . '/src/Facebook/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => '949557711747245',
-  'app_secret' => '73b92d2756883faf7481875d41077b91',
+  'app_id' => 'yourappid',
+  'app_secret' => 'appsecret',
   'default_graph_version' => 'v2.5',
   ]);
 
@@ -92,7 +92,7 @@ if (isset($accessToken)) {
 
 	// redirect the user back to the same page if it has "code" GET variable
 	if (isset($_GET['code'])) {
-		header('Location: ./decipher/index.php');
+		header('Location: ./decipher/index.php'); 
 	}
 
 	// getting basic info about user
